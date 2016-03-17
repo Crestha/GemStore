@@ -1,5 +1,5 @@
-# GemsStore
-Gems Store using AngularJS
+# Gem Store
+Gem Store using AngularJS
 
 
 References:
