@@ -1,0 +1,21 @@
+<ul class="nav nav-pills">
+	<li ng-class="{active:tab.isSelected(1)}"><a herf ng-click="tab.selectTab(1)">Description</a></li>
+	<li ng-class="{active:tab.isSelected(2)}"><a href ng-click="tab.selectTab(2)">Specs</a></li>
+	<li ng-class="{active:tab.isSelected(3)}"><a href ng-click="tab.selectTab(3)">Reviews</a></li>
+</ul>
+							
+<!--  Description Tab's Content  -->
+<div class="panel" ng-show="tab.isSelected(1)"> <!--ng-show="tab===1"-->
+	<h4>Description</h4>
+	<p>{{product.description}}</p>
+</div>
+<!--  Spec Tab's Content  -->
+<div class="panel" ng-show="tab.isSelected(2)">
+	<h4>Specifications</h4>
+	<blockquote>None yet</blockquote>
+</div>
+<!--  Review Tab's Content  -->
+<product-review class="panel" ng-show="tab.isSelected(3)"></product-review>
+	
+								
+							

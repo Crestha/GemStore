@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html ng-app="store">
+<head>
+	<title>Gem Store</title>
+    <!-- <link rel="stylesheet" type="text/css" href="bootstrap.min.css" /> -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+    <!--custom style sheet-->
+    <link rel="stylesheet" href="styles/mystyle.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.2.19/angular.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.0/jquery.min.js"></script>
+</head>
+
+<body ng-controller="StoreController as store">
+<div class="container-fluid">
+<!--  Store Header  -->
+	<div class="row">
+		<div class="col-xs-12">
+			<header>
+    			<h1 class="text-center">Flatlander Crafted Gems</h1>
+    			<h2 class="text-center">- an Angular store -</h2>
+			</header>
+		</div>
+	</div>
+<!-- end of Store Header  -->
+<!-- Main Products Container  -->
+	<div class="row">
+		<div class="col-xs-12">
+			<ul class="list-group">
+			<!--  Products Container  -->
+				<li class="list-group-item">
+					<div ng-repeat="product in store.products" class="bor">
+						<product-title></product-title>
+						<product-gallery></product-gallery>
+						<product-tab></product-tab>
+					</div>
+				</li>
+			</ul>
+			<!-- end of Products Container  -->
+		</div><!--end of col-->
+	</div><!--end of row-->
+<!-- end of Main Products Container  -->
+</div>
+<!--end of container-fluid-->
+<!-- <script type="text/javascript" src="angular.min.js"></script> -->
+<script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+<!--custom script-->
+<script src="script/app.js"></script>
+<script src="script/controllers.js"></script>
+<script src="script/directives.js"></script>
+</body>
+</html>

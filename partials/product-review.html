@@ -1,0 +1,28 @@
+<h4>Reviews</h4>
+	<blockquote ng-repeat="review in product.reviews">
+	<cite class="clearfix">{{review.author}} says:{{review.body}}</cite>
+		<b class="clearfix">User Rating:{{review.stars}} stars</b>
+	</blockquote>
+<form name="reviewForm" ng-submit="reviewForm.$valid && reviewCtrl.addReview(product)" novalidate>
+	<!--ng-submit allows us to call a function when the form is submitted-if valid is false, then addReview is never called-novalidate turn off default HTML validation-->
+	<blockquote>
+	<cite class="clearfix">{{reviewCtrl.review.author}} says:{{reviewCtrl.review.body}}</cite>
+		<b class="clearfix">User Rating:{{reviewCtrl.review.stars}} stars</b>
+	</blockquote>
+	<fieldset class="form-group">
+		<select ng-model="reviewCtrl.review.stars" class="form-control" ng-options="stars for stars in [5,4,3,2,1]" title="Stars" required>
+		<!--ng-model binds the form element value to the property-->
+			<option value>Rate the Product</option>
+		</select>
+	</fieldset>
+	<fieldset class="form-group">
+		<textarea ng-model="reviewCtrl.review.body" class="form-control" placeholder="Write a short review of the product..." title="Review" required></textarea>
+	</fieldset>
+	<fieldset class="form-group">
+		<input ng-model="reviewCtrl.review.author" type="email" class="form-control" placeholder="adma@example.org" title="Email" required/>
+	</fieldset>
+	<!--div>reviewForm is{{reviewForm.$valid}}</div--><!--$valid print forms validity-->
+	<fieldset class="form-group">
+		<input type="submit" class="btn btn-primary pull-right" value="Submit Review" />
+	</fieldset>
+</form>

@@ -1,0 +1,93 @@
+body{
+		font-size: 2em;
+		font-weight: bolder;
+}
+a,h1{
+	color:#8C0505;/*#C879B5;*/
+	
+}
+a:hover{
+	color:#8C0505;
+
+}
+/******************************
+Main body
+*******************************/
+.container-fluid{
+		width: 768px;
+		max-width: 768px;
+	}
+/*product container*/
+.list-group-item{
+	border:0px;
+}
+.bor:first-child{
+	border:1px solid #ddd;
+	border-radius: 5px 5px 0px 0px;
+	padding:10px 15px;
+	box-shadow: 0px 0px 10px #888888;
+}
+.bor:last-child{
+	border:1px solid #ddd;
+	border-radius: 0px 0px 5px 5px;
+	padding:10px 15px;
+	box-shadow: 0px 0px 10px #888888;
+}
+/*panel*/
+.panel {
+    box-shadow: none;
+}
+/***********************
+valid form review
+************************/
+/*red border for invalid*/
+.ng-invalid.ng-dirty{
+	border-color: #FA787E;
+}
+/*green border for valid*/
+.ng-valid.ng-dirty{
+	border-color: #78FA89;
+}
+/**********************
+bootstrap.min.css
+**********************/
+/*image thumbnails*/
+.img-responsive, .thumbnail > img, .thumbnail a > img, .carousel-inner > .item > img, .carousel-inner > .item > a > img {
+    display: block;
+    width: 80px;
+    max-width: 80px;
+    height: 80px;
+}
+.thumbnail a
+{
+	outline:none;
+}
+
+/*product tabs*/
+.nav-pills>li.active>a, .nav-pills>li.active>a:hover, .nav-pills>li.active>a:focus {
+    color: #fff;
+    background-color: #8C0505;
+}
+.nav-pills a
+{
+	outline:none;
+}
+/**********************
+bootstrap.min.css
+**********************/
+/*******************************
+Media Query
+*******************************/
+@media (max-width: 768px)
+{
+	body,h1,h2,h3{
+		font-size: 1.4em;
+	}
+}
+@media (max-width: 400px)
+{
+	.container-fluid{
+		width:400px;
+	}
+
+}
